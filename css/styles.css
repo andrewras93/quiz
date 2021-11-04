@@ -43,6 +43,8 @@ header {
 
 header nav ul {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 header nav ul li:nth-child(2) {
@@ -100,6 +102,11 @@ form, #resultsList {
     margin: 32px 0 64px 0;
 }
 
+form > div, #resultsList > div {
+    min-width: 50%;
+    max-width: 80%;
+}
+
 .question {
     display: flex;
     flex-direction: column;
@@ -122,8 +129,7 @@ form, #resultsList {
     color: var(--white);
     padding: 16px;
     border-radius: 16px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    width: 600px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;    
 }
 
 .answers h5 {
@@ -135,6 +141,10 @@ form, #resultsList {
 .answers > div {
     display: flex;
     align-items: center;
+}
+
+.answers input[type=radio] {
+    cursor: pointer;
 }
 
 .answers label {
@@ -149,14 +159,19 @@ form, #resultsList {
     border-radius: 8px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 #submitContainer {
     margin-top: 32px;
 }
 
-#submitContainer input {
+#submitContainer input[type=text] {
     margin-left: 16px;
+    padding: 8px;
+    border: 1px solid var(--secondary);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 6px;
 }
 
 .correctAnswer {
@@ -182,4 +197,11 @@ footer {
     background-color: var(--primary);
     padding: 16px;
     color: var(--white);
+    text-align: center;
+}
+
+@media screen and (max-width: 407px) {
+    #submitContainer input[type=text] {
+        margin-top: 16px;
+    }
 }
