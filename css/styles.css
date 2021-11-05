@@ -5,6 +5,7 @@
     --white: #FFFFFF;
     --black: #222222;
     --orange: #DE9E3F;
+    --gray: #eeeeee;
 }
 
 * {
@@ -100,6 +101,12 @@ form, #resultsList {
     align-items: center;
     text-align: center;
     margin: 32px 0 64px 0;
+}
+
+#resultsList {    
+    background-color: var(--gray);
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 form > div, #resultsList > div {
