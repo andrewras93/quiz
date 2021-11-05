@@ -77,7 +77,7 @@ export class Quiz {
                 s += `</label>`;
                 s += `</div>`;
             }
-            let color = answer[i] == this.questions[i].correctAnswer ? 'green' : 'darkred';
+            let color = answer[i] == this.questions[i].correctAnswer ? 'darkgreen' : 'darkred';
             s += `<p style='color: ${color}' class='correctAnswer'>`;
             s += `Du svarede: ${answer[i]} Det korrekte svar: ${this.questions[i].correctAnswer}`;
             s += `</p>`;
